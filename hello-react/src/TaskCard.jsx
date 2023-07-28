@@ -1,20 +1,20 @@
 import './TaskCard.css'
 
 const TaskCard = (props) => {
-    if (props.isCompleted === "true") {
+    if (props.completedAtDate) {
         return (
             <div className='TaskItem'>
                 <h2 className="text-xl font-bold mb-3">{props.title}</h2>
-                <p>Completed on: {props.date}</p>
-                <p>Assignee: {props.assignee}</p>
+                <p>Completed on: {props.completedAtDate}</p>
+                <p>Assignee: {props.assigneeName}</p>
             </div>
         )
     } else {
         return (
             <div className='TaskItem'>
                 <h2 className="text-xl font-bold mb-3">{props.title}</h2>
-                <p>Due on: {props.date}</p>
-                <p>Assignee: {props.assignee}</p>
+                <p>Due on: {props.dueDate}</p>
+                <p>Assignee: {props.assigneeName}</p>
             </div>
         )
     }

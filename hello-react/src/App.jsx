@@ -10,20 +10,19 @@ function App() {
             <main className="main">
                 <div className="tasks">
                     <h1>Pending</h1>
-                    <TaskCard title="Build the website with static content" date="10th April" assignee="Rohit S"
-                              isCompleted="false"/>
-                    <TaskCard title="Add blog" date="22nd March" assignee="Rohit M" isCompleted="false"/>
+                    <TaskCard title="Build the website with static content" dueDate="10th April" assigneeName="Rohit S"
+                    />
+                    <TaskCard title="Add blog" dueDate="22nd March" assigneeName="Rohit M"/>
                     <div className="new-task">
                         <p>➕ New task</p>
                     </div>
                 </div>
                 <div className="tasks">
                     <h1>Done</h1>
-                    <TaskCard title="Design the mockup" date="10th March" assignee="Rohit S" isCompleted="true"/>
-                    <TaskCard title="Get approval from principal" date="20th April" assignee="Ajay S"
-                              isCompleted="true"/>
+                    <TaskCard title="Design the mockup" completedAtDate="10th March" assigneeName="Rohit S"/>
+                    <TaskCard title="Get approval from principal" completedAtDate="20th April" assigneeName="Ajay S"
+                    />
                 </div>
-
             </main>
         </div>
     )
