@@ -1,6 +1,4 @@
-// @ts-ignore
 import React from "react";
-// @ts-ignore
 import TaskCard from "./TaskCard.tsx";
 
 function App() {
