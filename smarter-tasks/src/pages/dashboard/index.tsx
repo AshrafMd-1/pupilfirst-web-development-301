@@ -30,7 +30,7 @@ const Dashboard: React.FC = () => {
         <p className="text-gray-800">Your email is {user.email}</p>
       </div>
       <a
-        href="/"
+        href="/signin"
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8 mx-auto"
         onClick={() => {
           window.localStorage.removeItem("userData");
