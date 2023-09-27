@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes";
 import { ThemeContext } from "./context/theme";
+import { ProjectsProvider } from "./context/projects/context";
+import { UsersProvider } from "./context/members/context";
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
@@ -11,8 +13,11 @@ const App = () => {
         theme === "dark" ? "dark" : ""
       }`}
     >
-      {theme}
-      <RouterProvider router={router} />
+      <ProjectsProvider>
+        <UsersProvider>
+          <RouterProvider router={router} />
+        </UsersProvider>
+      </ProjectsProvider>
     </div>
   );
 };
