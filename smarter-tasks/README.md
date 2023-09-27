@@ -18,10 +18,17 @@ If you are developing a production application, we recommend updating the config
 ```js
    parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+        sourceType
+:
+    'module',
+        project
+:
+    ['./tsconfig.json', './tsconfig.node.json'],
+        tsconfigRootDir
+:
+    __dirname,
+}
+,
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked`
