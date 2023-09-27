@@ -1,13 +1,13 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import AccountLayout from "../layouts/account";
-import ProtectedRoute from "./ProtectedRoute";
+import ProtectedRoutes from "./ProtectedRoutes.tsx";
 import Signin from "../pages/signin";
 import Signup from "../pages/signup";
 import Projects from "../pages/projects";
 import Members from "../pages/members";
 import Logout from "../pages/logout";
-import NotFound from "../pages/NotFound.tsx";
+import NotFound from "../pages/Notfound.tsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/account/projects" replace /> },
@@ -31,9 +31,9 @@ const router = createBrowserRouter([
   {
     path: "account",
     element: (
-      <ProtectedRoute>
+      <ProtectedRoutes>
         <AccountLayout />
-      </ProtectedRoute>
+      </ProtectedRoutes>
     ),
     children: [
       { index: true, element: <Navigate to="/account/projects" replace /> },

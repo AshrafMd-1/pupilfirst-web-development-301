@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-import { addNewUser} from "../../context/members/actions.tsx";
+import { addNewUser} from "../../context/members/actions.ts";
 import { useUsersDispatch } from "../../context/members/context";
 
 type Inputs = {

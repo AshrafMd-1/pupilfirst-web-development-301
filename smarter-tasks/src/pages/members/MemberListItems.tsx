@@ -1,6 +1,6 @@
 import { useUsersDispatch } from "../../context/members/context";
 import { useUsersState } from "../../context/members/context";
-import { deleteSpecificUser } from "../../context/members/actions.tsx";
+import { deleteSpecificUser } from "../../context/members/actions.ts";
 
 export default function MemberListItems() {
   let state: any = useUsersState();

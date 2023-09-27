@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { fetchUsers } from "../../context/members/actions";
+import { fetchUsers } from "../../context/members/actions.ts";
 import { useUsersDispatch } from "../../context/members/context";
 import MemberListItems from "./MemberListItems";
 
