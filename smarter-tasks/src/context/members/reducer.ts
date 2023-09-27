@@ -28,7 +28,7 @@ export const initialState: UsersState = {
 
 export const reducer = (
   state: UsersState = initialState,
-  action: UsersActions
+  action: UsersActions,
 ): UsersState => {
   switch (action.type) {
     case "GET_ALL_USERS":
@@ -49,8 +49,8 @@ export const reducer = (
         isError: true,
         errorMessage: action.payload,
       };
-      case "ADD_USER":
-        return { ...state, users: [...state.users, action.payload] };
+    case "ADD_USER":
+      return { ...state, users: [...state.users, action.payload] };
     case "DELETE_USER":
       return {
         ...state,

@@ -1,7 +1,6 @@
 import MemberList from "./MemberList";
 import NewMember from "./NewMember.tsx";
 
-
 const Members = () => {
   return (
     <>

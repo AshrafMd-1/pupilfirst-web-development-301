@@ -24,7 +24,7 @@ export const initialState: ProjectsState = {
 
 export const reducer = (
   state: ProjectsState = initialState,
-  action: ProjectsActions
+  action: ProjectsActions,
 ): ProjectsState => {
   switch (action.type) {
     case "FETCH_PROJECTS_REQUEST":

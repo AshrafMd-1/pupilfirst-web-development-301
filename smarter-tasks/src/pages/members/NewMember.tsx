@@ -1,15 +1,14 @@
-import { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { Fragment, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment } from "react";
 
-import { addNewUser} from "../../context/members/actions.ts";
+import { addNewUser } from "../../context/members/actions.ts";
 import { useUsersDispatch } from "../../context/members/context";
 
 type Inputs = {
-  newName: string;
-  newEmail: string;
-  newPassword: string;
+  name: string;
+  email: string;
+  password: string;
 };
 
 const NewMember = () => {
@@ -26,12 +25,12 @@ const NewMember = () => {
   const toggleDialog = () => setIsOpen(!isOpen);
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    const { newName, newEmail, newPassword } = data;
+    const { name, email, password } = data;
 
     const response = await addNewUser(dispatchUsers, {
-      name: newName,
-      email: newEmail,
-      password: newPassword,
+      name: name,
+      email: email,
+      password: password,
     });
 
     if (response.ok) {
@@ -91,9 +90,9 @@ const NewMember = () => {
                       placeholder="Name"
                       id="name"
                       autoFocus
-                      {...register("newName", { required: true })}
+                      {...register("name", { required: true })}
                       className={`w-full p-2  border-gray-300 border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm ${
-                        errors.newName ? "error-field" : ""
+                        errors.name ? "error-field" : ""
                       }`}
                     />
                   </div>
@@ -109,10 +108,10 @@ const NewMember = () => {
                       placeholder="Email"
                       id="email"
                       autoFocus
-                      {...register("newEmail", { required: true })}
+                      {...register("email", { required: true })}
                       className={`w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
         
-                    input-field ${errors.newEmail ? "error-field" : ""}`}
+                    input-field ${errors.email ? "error-field" : ""}`}
                     />
                   </div>
 
@@ -127,16 +126,16 @@ const NewMember = () => {
                     <input
                       type="password"
                       placeholder="Password"
-                        id="password"
+                      id="password"
                       autoFocus
-                      {...register("newPassword", { required: true })}
+                      {...register("password", { required: true })}
                       className={`w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
-                     input-field ${errors.newPassword ? "error-field" : ""}`}
+                     input-field ${errors.password ? "error-field" : ""}`}
                     />
                   </div>
                   <button
                     type="submit"
-                    id="new-member-btn"
+                    id="create-member-btn"
                     className="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 mr-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                   >
                     Submit

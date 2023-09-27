@@ -1,4 +1,5 @@
 import { API_ENDPOINT } from "../../config/constants";
+
 export const fetchUsers = async (dispatch: any) => {
   const token = localStorage.getItem("authToken") ?? "";
   try {

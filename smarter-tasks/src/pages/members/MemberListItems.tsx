@@ -1,5 +1,4 @@
-import { useUsersDispatch } from "../../context/members/context";
-import { useUsersState } from "../../context/members/context";
+import { useUsersDispatch, useUsersState } from "../../context/members/context";
 import { deleteSpecificUser } from "../../context/members/actions.ts";
 
 export default function MemberListItems() {
