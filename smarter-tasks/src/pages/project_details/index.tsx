@@ -1,15 +1,17 @@
 import React from "react";
 import ProjectDetails from "./ProjectDetails";
-import {Outlet} from "react-router-dom";
-import {TasksProvider} from "../../context/task/context";
-
+import { Outlet } from "react-router-dom";
+import { TasksProvider } from "../../context/task/context";
+import {CommentsProvider as CommentProvider } from "../../context/comment/context";
 
 const ProjectDetailsIndex: React.FC = () => {
   return (
-      <TasksProvider>
-        <ProjectDetails/>
-        <Outlet/>
-      </TasksProvider>
+    <TasksProvider>
+      <CommentProvider>
+        <ProjectDetails />
+        <Outlet />
+      </CommentProvider>
+    </TasksProvider>
   );
 };
 
