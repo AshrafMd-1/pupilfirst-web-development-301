@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import {useEffect} from "react";
+import {Navigate} from "react-router-dom";
 
 const Logout = () => {
   useEffect(() => {
@@ -7,7 +7,7 @@ const Logout = () => {
     localStorage.removeItem("userData");
   }, []);
 
-  return <Navigate to="/signin" />;
+  return <Navigate to="/signin"/>;
 };
 
 export default Logout;

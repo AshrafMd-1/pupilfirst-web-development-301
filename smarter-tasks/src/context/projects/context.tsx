@@ -1,30 +1,25 @@
-import React, { createContext, useContext, useReducer } from "react";
-import {
-  initialState,
-  ProjectsActions,
-  ProjectsState,
-  reducer,
-} from "./reducer";
+import React, {createContext, useContext, useReducer} from "react";
+import {initialState, ProjectsActions, ProjectsState, reducer,} from "./reducer";
 
 const ProjectsStateContext = createContext<ProjectsState | undefined>(
-  undefined,
+    undefined,
 );
 
 type ProjectsDispatch = React.Dispatch<ProjectsActions>;
 const ProjectsDispatchContext = createContext<ProjectsDispatch | undefined>(
-  undefined,
+    undefined,
 );
 
 export const ProjectsProvider: React.FC<React.PropsWithChildren> = ({
-  children,
-}) => {
+                                                                      children,
+                                                                    }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <ProjectsStateContext.Provider value={state}>
-      <ProjectsDispatchContext.Provider value={dispatch}>
-        {children}
-      </ProjectsDispatchContext.Provider>
-    </ProjectsStateContext.Provider>
+      <ProjectsStateContext.Provider value={state}>
+        <ProjectsDispatchContext.Provider value={dispatch}>
+          {children}
+        </ProjectsDispatchContext.Provider>
+      </ProjectsStateContext.Provider>
   );
 };
 

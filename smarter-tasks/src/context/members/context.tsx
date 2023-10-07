@@ -1,22 +1,22 @@
-import React, { createContext, useContext, useReducer } from "react";
-import { initialState, reducer, UsersActions, UsersState } from "./reducer";
+import React, {createContext, useContext, useReducer} from "react";
+import {initialState, reducer, UsersActions, UsersState} from "./reducer";
 
 const UsersStateContext = createContext<UsersState | undefined>(undefined);
 const UsersDispatchContext = createContext<
-  React.Dispatch<UsersActions> | undefined
+    React.Dispatch<UsersActions> | undefined
 >(undefined);
 
 export const UsersProvider: React.FC<React.PropsWithChildren<{}>> = ({
-  children,
-}) => {
+                                                                       children,
+                                                                     }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <UsersStateContext.Provider value={state}>
-      <UsersDispatchContext.Provider value={dispatch}>
-        {children}
-      </UsersDispatchContext.Provider>
-    </UsersStateContext.Provider>
+      <UsersStateContext.Provider value={state}>
+        <UsersDispatchContext.Provider value={dispatch}>
+          {children}
+        </UsersDispatchContext.Provider>
+      </UsersStateContext.Provider>
   );
 };
 

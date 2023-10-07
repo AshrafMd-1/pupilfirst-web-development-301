@@ -13,11 +13,11 @@ export interface UsersState {
 }
 
 export type UsersActions =
-  | { type: "GET_ALL_USERS" }
-  | { type: "GET_ALL_USERS_SUCCESS"; payload: User[] }
-  | { type: "GET_ALL_USERS_FAILURE"; payload: string }
-  | { type: "ADD_USER"; payload: User }
-  | { type: "DELETE_USER"; payload: number };
+    | { type: "GET_ALL_USERS" }
+    | { type: "GET_ALL_USERS_SUCCESS"; payload: User[] }
+    | { type: "GET_ALL_USERS_FAILURE"; payload: string }
+    | { type: "ADD_USER"; payload: User }
+    | { type: "DELETE_USER"; payload: number };
 
 export const initialState: UsersState = {
   users: [],
@@ -27,8 +27,8 @@ export const initialState: UsersState = {
 };
 
 export const reducer = (
-  state: UsersState = initialState,
-  action: UsersActions,
+    state: UsersState = initialState,
+    action: UsersActions,
 ): UsersState => {
   switch (action.type) {
     case "GET_ALL_USERS":
@@ -50,7 +50,7 @@ export const reducer = (
         errorMessage: action.payload,
       };
     case "ADD_USER":
-      return { ...state, users: [...state.users, action.payload] };
+      return {...state, users: [...state.users, action.payload]};
     case "DELETE_USER":
       return {
         ...state,

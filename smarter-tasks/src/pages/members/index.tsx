@@ -3,13 +3,13 @@ import NewMember from "./NewMember.tsx";
 
 const Members = () => {
   return (
-    <>
-      <div className="flex justify-between">
-        <h2 className="text-2xl font-medium tracking-tight">Members</h2>
-        <NewMember />
-      </div>
-      <MemberList />
-    </>
+      <>
+        <div className="flex justify-between">
+          <h2 className="text-2xl font-medium tracking-tight">Members</h2>
+          <NewMember/>
+        </div>
+        <MemberList/>
+      </>
   );
 };
 

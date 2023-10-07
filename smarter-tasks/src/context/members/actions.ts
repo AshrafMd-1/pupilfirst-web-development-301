@@ -1,9 +1,9 @@
-import { API_ENDPOINT } from "../../config/constants";
+import {API_ENDPOINT} from "../../config/constants";
 
 export const fetchUsers = async (dispatch: any) => {
   const token = localStorage.getItem("authToken") ?? "";
   try {
-    dispatch({ type: "GET_ALL_USERS" });
+    dispatch({type: "GET_ALL_USERS"});
     const response = await fetch(`${API_ENDPOINT}/users`, {
       method: "GET",
       headers: {
@@ -12,7 +12,7 @@ export const fetchUsers = async (dispatch: any) => {
       },
     });
     const data = await response.json();
-    dispatch({ type: "GET_ALL_USERS_SUCCESS", payload: data });
+    dispatch({type: "GET_ALL_USERS_SUCCESS", payload: data});
   } catch (error) {
     console.log("Error fetching users:", error);
     dispatch({
@@ -37,13 +37,13 @@ export const addNewUser = async (dispatch: any, args: any) => {
     }
     const data = await response.json();
     if (data.errors && data.errors.length > 0) {
-      return { ok: false, error: data.errors[0].message };
+      return {ok: false, error: data.errors[0].message};
     }
-    dispatch({ type: "ADD_USER", payload: data.user });
-    return { ok: true };
+    dispatch({type: "ADD_USER", payload: data.user});
+    return {ok: true};
   } catch (error) {
     console.error("Operation failed:", error);
-    return { ok: false, error };
+    return {ok: false, error};
   }
 };
 
@@ -63,10 +63,10 @@ export const deleteSpecificUser = async (dispatch: any, id: number) => {
       console.error("Failed to delete user");
     }
 
-    dispatch({ type: "DELETE_USER", payload: id });
-    return { ok: true };
+    dispatch({type: "DELETE_USER", payload: id});
+    return {ok: true};
   } catch (error) {
     console.error("Operation failed:", error);
-    return { ok: false, error };
+    return {ok: false, error};
   }
 };
