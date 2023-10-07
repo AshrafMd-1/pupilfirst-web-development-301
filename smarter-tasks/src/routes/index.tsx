@@ -11,7 +11,7 @@ import Notfound from "../pages/Notfound";
 import ProjectContainer from "../pages/projects/ProjectContainer";
 import ProjectDetails from "../pages/project_details";
 import NewTask from "../pages/tasks/NewTask";
-import TaskDetailsContainer from "../pages/tasks/TaskDetailContainer";
+import TaskDetailsContainer from "../pages/tasks/TaskDetailsContainer.tsx";
 
 
 const router = createBrowserRouter([

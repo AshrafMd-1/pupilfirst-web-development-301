@@ -5,7 +5,7 @@ import {useTasksDispatch} from "../../context/task/context";
 import {AvailableColumns, ProjectData} from "../../context/task/types";
 
 import {useParams} from "react-router-dom";
-import {reorderTasks, updateTask} from "../../context/task/action.ts";
+import {reorderTasks, updateTask} from "../../context/task/actions.ts";
 
 const Container = (props: React.PropsWithChildren) => {
   return <div className="flex">{props.children}</div>;

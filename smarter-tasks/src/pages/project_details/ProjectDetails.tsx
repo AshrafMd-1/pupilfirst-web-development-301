@@ -5,7 +5,7 @@ import {useTasksDispatch, useTasksState} from "../../context/task/context";
 
 import DragDropList from "./DragDropList";
 import {useProjectsState} from "../../context/projects/context";
-import {refreshTasks} from "../../context/task/action.ts";
+import {refreshTasks} from "../../context/task/actions.ts";
 
 const ProjectDetails = () => {
   const tasksState = useTasksState();

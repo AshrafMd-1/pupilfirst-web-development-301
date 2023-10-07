@@ -3,9 +3,9 @@ import {Dialog, Listbox, Transition} from "@headlessui/react";
 import {Fragment, useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import {SubmitHandler, useForm} from "react-hook-form";
-import { getComments as fetchComments,} from "../../context/comment/action";
+import { getComments as fetchComments,} from "../../context/comment/actions.ts";
 import {useTasksDispatch, useTasksState,} from "../../context/task/context";
-import {updateTask} from "../../context/task/action";
+import {updateTask} from "../../context/task/actions.ts";
 import {useProjectsState,} from "../../context/projects/context";
 import {
   useCommentsDispatch as useCommentDispatch,

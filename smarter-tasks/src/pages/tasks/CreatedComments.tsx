@@ -1,7 +1,7 @@
 import {useForm, SubmitHandler} from "react-hook-form";
 import {useParams} from "react-router-dom";
 import {useCommentsDispatch} from "../../context/comment/context";
-import {addComment} from "../../context/comment/action";
+import {addComment} from "../../context/comment/actions.ts";
 import {CommentsPayload} from "../../context/comment/types";
 
 export default function CreatedComments() {

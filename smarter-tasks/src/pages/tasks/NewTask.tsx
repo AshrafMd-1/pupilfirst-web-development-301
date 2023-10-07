@@ -4,7 +4,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {useProjectsState} from "../../context/projects/context";
 import {useTasksDispatch} from "../../context/task/context";
-import {addTask} from "../../context/task/action";
+import {addTask} from "../../context/task/actions.ts";
 import {TaskDetailsPayload} from "../../context/task/types";
 
 const NewTask = () => {
