@@ -1,8 +1,4 @@
-WD301 course assignments
+# Smart-Tasks
 
-This is all the project folders and files that were given as assignments for pupil school Web Development course
-301 [wd301].
+A collaborative project task manager where users can create, assign, and track tasks efficiently.
 
-Please don't copy or plagiarize it.
-
-Only for reference purposes.
